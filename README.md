@@ -68,17 +68,18 @@ _These notes are intended for my own personal use only; you are free to use them
    gh auth login
    ```
    
-8. Configure the default git user.
+8. Set the git user.
 
    ```bash
    git config --global user.email "hello@jbmorley.co.uk"
    git config --global user.name "Jason Morley"
    ```
+   
+9. Set the git editor.
 
-```
-# Set the Git edtor.
-echo "export EDITOR=emacs" >> ~/.zshrc
-```
+   ```
+   echo "export EDITOR=emacs" >> ~/.zshrc
+   ```
 
 ## Additional Steps
 
