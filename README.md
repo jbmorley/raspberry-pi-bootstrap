@@ -6,7 +6,7 @@ _These notes are intended for my own personal use only; you are free to use them
 
 ## Getting Started
 
-1. Update the system.
+1. Update the installed software.
 
    ```bash
    sudo apt-get update
