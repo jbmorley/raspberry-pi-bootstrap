@@ -2,7 +2,7 @@
 
 Personal notes on bootstrapping a basic Raspberry Pi setup
 
-_These notes are intended for my own personal use only; you are free to use them for reference, but you'll almost certainly find they include steps which don't match your preferred configuration or needs._
+_These notes are intended for my own personal use only; you are free to use them for reference, but you'll almost certainly find they include steps which don't match your preferred configuration or needs. Please don't use my email address in your own setups._
 
 ## Getting Started
 
