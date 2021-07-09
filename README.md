@@ -27,6 +27,18 @@ _These notes are intended for my own personal use only; you are free to use them
    ```bash
    chsh -s $(which zsh)
    ```
+   
+4. Customise the zsh prompt (using [`configure-prompt`](https://github.com/jbmorley/configure-prompt)).
+
+   ```bash
+   mkdir -p ~/Projects
+   cd ~/Projects
+   git clone git@github.com:jbmorley/configure-prompt.git
+   echo """FPATH="\$FPATH:\$HOME/Projects/configure-prompt"
+   autoload configure-prompt
+   configure-prompt
+   """ >> ~/.zshrc
+   ```
 
 ```
 # TODO: Set the hostname
@@ -57,16 +69,6 @@ git config --global user.name "Jason Morley"
 
 # Authenticate GitHub
 gh auth login
-
-# Install configure-prompt
-mkdir -p ~/Projects
-cd ~/Projects
-git clone git@github.com:jbmorley/configure-prompt.git
-echo """FPATH="\$FPATH:\$HOME/Projects/configure-prompt"
-autoload configure-prompt
-configure-prompt
-""" >> ~/.zshrc
-
 
 # Set the GitHub edtor.
 echo "export EDITOR=emacs" >> ~/.zshrc
