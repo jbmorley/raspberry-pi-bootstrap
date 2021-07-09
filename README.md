@@ -51,27 +51,31 @@ _These notes are intended for my own personal use only; you are free to use them
    ```
    
    You may also wish to disable key expiry for this new machine (see https://login.tailscale.com/admin/machines).
+   
+6. Generate an SSH key.
+
+   ```bash
+   ssh-keygen -t ed25519 -C "hello@jbmorley.co.uk"
+   ```
+
+7. Install and authenticate the [GitHub CLI](https://cli.github.com). This is one of the most hands-off ways of adding your SSH key if that's how you prefer to authenticate with git).
+
+   ```bash
+   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+   sudo apt-get update
+   sudo apt-get install --yes gh
+   gh auth login
+   ```
 
 ```
 # TODO: Set the hostname
 # TODO: Set the ssh-keys
 # TODO: Update the password
 
-# Install GitHub CLI
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
-
-# Generate a new SSH Key
-ssh-keygen -t ed25519 -C "hello@jbmorley.co.uk"
-
 # Configure the GitHub user
 git config --global user.email "hello@jbmorley.co.uk"
 git config --global user.name "Jason Morley"
-
-# Authenticate GitHub
-gh auth login
 
 # Set the GitHub edtor.
 echo "export EDITOR=emacs" >> ~/.zshrc
