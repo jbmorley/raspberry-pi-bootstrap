@@ -14,9 +14,6 @@ _These notes are intended for my own personal use only; you are free to use them
    ```
 
 ```
-# Update the system.
-
-
 # Install the dependencies
 sudo apt-get install \
     emacs \
