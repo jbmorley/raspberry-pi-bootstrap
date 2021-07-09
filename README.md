@@ -2,12 +2,20 @@
 
 Personal notes on bootstrapping a basic Raspberry Pi setup
 
-These notes are intended for my own personal use only; you are free to use them for reference, but you'll almost certainly find they include steps which don't match your preferred configuration or needs.
+_These notes are intended for my own personal use only; you are free to use them for reference, but you'll almost certainly find they include steps which don't match your preferred configuration or needs._
+
+## Getting Started
+
+1. Update the system.
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get upgrade --yes
+   ```
 
 ```
 # Update the system.
-sudo apt-get update
-sudo apt-get upgrade  # --yes?
+
 
 # Install the dependencies
 sudo apt-get install \
