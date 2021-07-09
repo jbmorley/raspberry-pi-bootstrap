@@ -39,18 +39,23 @@ _These notes are intended for my own personal use only; you are free to use them
    configure-prompt
    """ >> ~/.zshrc
    ```
+   
+5. Install [Tailscale](https://tailscale.com).
+
+   ```bash
+   curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add -
+   curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+   sudo apt-get update
+   sudo apt-get install tailscale
+   sudo tailscale up
+   ```
+   
+   You may also wish to disable key expiry for this new machine (see https://login.tailscale.com/admin/machines).
 
 ```
 # TODO: Set the hostname
 # TODO: Set the ssh-keys
 # TODO: Update the password
-
-# Install Tailscale
-curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add -
-curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list
-sudo apt-get update
-sudo apt-get install tailscale
-sudo tailscale up
 
 Don't forget to disable key expiry if you don't want to have to reauthenticate every time.
 
