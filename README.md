@@ -16,16 +16,19 @@ _These notes are intended for my own personal use only; you are free to use them
 2. Install some basic dependencies.
 
    ```
-   sudo apt-get install \
+   sudo apt-get install --yes \
        emacs \
        mosh \
        zsh
    ```
 
-```
-# Make zsh the default shell
-chsh -s $(which zsh)
+3. Make zsh the default shell.
 
+   ```bash
+   chsh -s $(which zsh)
+   ```
+
+```
 # TODO: Set the hostname
 # TODO: Set the ssh-keys
 # TODO: Update the password
