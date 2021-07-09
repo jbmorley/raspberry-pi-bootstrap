@@ -13,13 +13,16 @@ _These notes are intended for my own personal use only; you are free to use them
    sudo apt-get upgrade --yes
    ```
 
-```
-# Install the dependencies
-sudo apt-get install \
-    emacs \
-    mosh \
-    zsh
+2. Install some basic dependencies.
 
+   ```
+   sudo apt-get install \
+       emacs \
+       mosh \
+       zsh
+   ```
+
+```
 # Make zsh the default shell
 chsh -s $(which zsh)
 
