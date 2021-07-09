@@ -69,10 +69,6 @@ _These notes are intended for my own personal use only; you are free to use them
    ```
 
 ```
-# TODO: Set the hostname
-# TODO: Set the ssh-keys
-# TODO: Update the password
-
 # Configure the GitHub user
 git config --global user.email "hello@jbmorley.co.uk"
 git config --global user.name "Jason Morley"
@@ -80,3 +76,9 @@ git config --global user.name "Jason Morley"
 # Set the GitHub edtor.
 echo "export EDITOR=emacs" >> ~/.zshrc
 ```
+
+## Additional Steps
+
+- [ ] Set the hostname
+- [ ] authorized_keys
+- [ ] Update the password
